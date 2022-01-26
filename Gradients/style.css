@@ -1,0 +1,104 @@
+body {
+  width: 1400px;
+  margin: 0;
+  background-color: #faebf3;
+  font-family: Verdana;
+  font-weight: bold;
+  color: #e08d9b;
+  text-align: center;
+  
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  gap: 30px;
+  width: 1120px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+}
+
+.gradient {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  padding: 5px;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.gradient--right {
+  background: linear-gradient(to right, #ffc0cb, #0000ff);
+}
+.gradient--left {
+  background: linear-gradient(to left, #ffc0cb, #0000ff);
+}
+.gradient--top {
+  background: linear-gradient(to top, #ffc0cb, #0000ff);
+}
+.gradient--bottom {
+  background: linear-gradient(to bottom, #ffc0cb, #0000ff);
+}
+.gradient--bottom-left {
+  background: linear-gradient(to bottom left, #ffc0cb, #0000ff);
+}
+.gradient--degree{
+  background: linear-gradient(120deg, #ffc0cb, #0000ff);
+}
+.gradient--multi{
+  background: linear-gradient(45deg, #ffc0cb 33%, #add8e6 33%,#add8e6 67%, #90ee90 67%);
+}
+.gradient--managed-transition{
+  background: linear-gradient(to top, #ffc0cb, 23%, #add8e6);
+}
+.gradient--image{
+  background-image: linear-gradient(to right, #ffc0cb, 23%, transparent),
+              url('title-bg.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  color: #e08d9b;
+}
+.gradient--multi-pro {
+  background: linear-gradient(217deg, rgba(255,0,0,0.8), rgba(255,0,0,0) 70.71%),
+              linear-gradient(127deg, rgba(0,255,0,0.8), rgba(255,0,0,0) 70.71%),
+              linear-gradient(336deg, rgba(0,0,255,0.8), rgba(255,0,0,0) 70.71%);
+}
+
+.gradient--radial{
+  background: radial-gradient(#ffc0cb, #add8e6);
+}
+.gradient--radial-stop{
+  background: radial-gradient(#ff6601 30px, #ffa703 40%, #ecdd10 50%, #121313 80%);
+}
+.gradient--radial-position{
+  background: radial-gradient(at 10% 10%, #ff6601 30px, #ffa703 40%, #ecdd10 50%, #121313 80%);
+}
+.gradient--radial-size{
+  background: radial-gradient(circle farthest-corner at 30% 50%, #ff6601 30px, #ffa703 40%, #ecdd10 50%, #121313 80%);
+}
+.gradient--radial-multi {
+  background: radial-gradient(circle at 50% 0, rgba(255,0,0,0.5), rgba(255,0,0,0) 70.71%),
+              radial-gradient(circle at 6.7% 75%, rgba(0,255,0,0.5), rgba(255,0,0,0) 70.71%),
+              radial-gradient(circle at 93.3% 75%, rgba(0,0,255,0.5), rgba(255,0,0,0) 70.71%);
+  border-radius: 50%;
+}
+.gradient--linear-repeat {
+  background: repeating-linear-gradient(165deg, #ffc0cb, #ffc0cb 10%, #add8e6 10%, #add8e6 20%);
+}
+.gradient--repeat-linear-pro {
+  background: 
+      repeating-linear-gradient(217deg, rgba(255,192,203,0.5) 30px, rgba(173,255,144,0.5) 60px, rgba(173,216,230,0.5) 80px),
+      repeating-linear-gradient(127deg, rgba(255,192,203,0.5) 30px, rgba(173,255,144,0.5) 60px, rgba(173,216,230,0.5) 80px),
+      repeating-linear-gradient(336deg, rgba(255,192,203,0.5) 30px, rgba(173,255,144,0.5) 60px, rgba(173,216,230,0.5) 80px);
+}
+.gradient--radial-repeat {
+  background: repeating-radial-gradient(#ff6601, #ff6601 5px, #ffa703 10px, #ffa703 15px);
+}
+.gradient--repeat-radial-pro {
+  background: 
+      repeating-radial-gradient(ellipse at 80% 50%, rgba(255,192,203,0.5) 30px, rgba(173,255,144,0.5) 60px, rgba(173,216,230,0.5) 80px),
+      repeating-radial-gradient(ellipse at 20% 50%, rgba(255,192,203,0.5) 30px, rgba(173,255,144,0.5) 60px, rgba(173,216,230,0.5) 80px);
+  border-radius: 50%;
+}
