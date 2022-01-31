@@ -1,0 +1,193 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+}
+
+.clearfix {
+  content: ""; /* Генерируем пустой элемент */
+  clear: both; /* Отменяем обтекание*/
+  display: block; 
+}
+
+.slider-wrapper {
+  display: block;
+  position: relative;
+  width: 500px;
+  height: 300px; /*ins*/
+  box-sizing: border-box; /*ins*/
+  overflow: hidden;
+  background: #ddd;
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  /* float: left;  */
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #ff0000;
+  opacity: 1;
+  z-index: 0;
+  transition: transform 1600ms;
+  transform: scale(1);
+}
+
+.slider:not(:nth-of-type(3n)) {
+  margin-right: 10px;
+}
+
+.slide1 {
+  background: #00bcd7;
+}
+
+.slide2 {
+  background: #009788;
+  left: 500px;
+}
+
+.slide3 {
+  background: #ff5608;
+  left: 1000px;
+  /* left: 200%; */
+}
+
+.slide4 {
+  background: #607d8d;
+  left: 1500px;
+  /* left: 300%; */
+}
+
+.slider > div{
+  padding: 10px;
+}
+
+/*Slider inner slide effect*/
+
+.slider h2 {
+  /* opacity: 0;
+  transform: translateX(500px); */
+  transition: transform 800ms, opacity 800ms;
+  transition-delay: 1s;
+}
+
+/*Arrows*/
+
+.control {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  margin-top: 20%;
+  z-index: 55;
+}
+
+.control label {
+  z-index: 0;
+  display: none;
+  color: rgb(90, 90, 90);
+  line-height: 50px;
+  font-size: 50px;
+  cursor: pointer;
+  opacity: 0.5;
+  
+}
+
+.control label:hover {
+  opacity: 0.7;
+}
+
+.next {
+  right: 1%;
+}
+
+.previous {
+  left: 1%;
+}
+
+/* Slider pagination */
+
+.slider-pagination {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  z-index: 10;
+}
+
+.slider-pagination label {
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  display: inline-block;
+  border-radius: 50%;
+  background: rgba(255, 255, 0, 0.2);
+  border: solid 2px rgba(255, 0, 255, 0.4);
+  cursor: pointer;
+}
+
+/* Slider Pagger arrow event */
+
+.slide-radio1:checked~.next .numb2,
+.slide-radio2:checked~.next .numb3,
+.slide-radio3:checked~.next .numb4,
+.slide-radio2:checked~.previous .numb1,
+.slide-radio3:checked~.previous .numb2,
+.slide-radio4:checked~.previous .numb3 {
+  display: block;
+  z-index: 1;
+}
+
+/* Slider Pagger event */
+.slide-radio1:checked ~.slider-pagination .page1,
+.slide-radio2:checked ~.slider-pagination .page2,
+.slide-radio3:checked ~.slider-pagination .page3,
+.slide-radio4:checked ~.slider-pagination .page4 {
+  background: rgba(255, 255, 0, 1);
+}
+
+/*  Slider slide effect*/
+
+.slide-radio1:checked~.slider {
+  transform: translateX(0);
+  opacity: 1;
+}
+.slide-radio2:checked~.slider {
+  transform: translateX(-500px);
+  opacity: 1;
+}
+.slide-radio3:checked~.slider {
+  transform: translateX(-1000px);
+  opacity: 1;
+}
+.slide-radio4:checked~.slider {
+  transform: translateX(-1500px);
+}
+
+.slide-radio1:checked~.slide1 h2,
+.slide-radio2:checked~.slide2 h2,
+.slide-radio3:checked~.slide3 h2,
+.slide-radio4:checked~.slide4 h2 {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+/* @media only screen and (max-width: 767px) {
+  .slider h2 {
+    font-size: 20px;
+  }
+  .slider>div {
+    padding: 0 2%
+  }
+  .control label {
+    font-size: 35px;
+  }
+  .slider .button {
+    padding: 0 15px;
+  }
+} */
