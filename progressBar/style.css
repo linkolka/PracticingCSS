@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  background: linear-gradient(to right top, #ff0000 50%, #ddd 50%);
+  background-size: 100% calc(100% - 100vh + 130px);
+  background-repeat: no-repeat;
+}
+
+/* В абсолютно позиционированном элементе можно одновременно задавать противоположные границы. Браузер растянет такой элемент до границ. */
+
+ body::before {
+  content: '';
+  position: fixed;
+  top: 130px;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
+  background: #fff;
+} 
+
+header {
+  position: fixed;
+  top: 0;
+  height: 125px;
+  background: rgb(190, 114, 114);
+  width: 100%; /*нужно указать ширину из-за позиционирования*/
+  }
+
+
+
+.main {
+  margin-top: 130px;
+}
